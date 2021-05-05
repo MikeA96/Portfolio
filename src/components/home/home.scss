@@ -1,0 +1,129 @@
+@import './../../styles/_typography.scss' ;
+@import './../../styles/_mixins.scss';
+.home__wrapper{
+    display:flex;
+    justify-content:center;
+    margin-top:105px;
+    animation:fadeIn ease 10s;
+    width:100%;
+    @keyframes fadeIn{
+        0%{
+            opacity:0
+        }
+        100%{
+            opacity:1;
+        }
+    }
+    .home__header{
+    font-family:"Racing Sans One", cursive;
+    color:#9B2335;
+    display:flex;
+    align-items:center;
+    font-size:90px;
+    @media screen and ( max-width:700px){
+        font-size:40px;
+    };
+    z-index:1;
+    text-shadow: 4px 0 0 #fff, -2px 0 0 #fff, 0 4px 0 #fff, 0 -2px 0 #fff, 2px 2px #fff, -1px -1px 0 #fff, 2px -1px 0 #fff, -1px 2px 0 #fff;
+}
+
+}
+.home__lightning--wrapper{
+    position:absolute;
+    display:flex;
+    width:100%;
+    z-index:0;
+    top:0px;
+    justify-content:center;
+    animation:fadeIn ease 10s;
+    @keyframes fadeIn{
+        0%{
+            opacity:0
+        }
+        100%{
+            opacity:1;
+        }
+    }
+    .home__lightning{
+@media screen and (max-width:479px){
+    display:none;
+}
+        
+        }
+        .home__lightning:nth-child(2){
+            position:relative;
+            right:60px;
+           @media screen and (max-width:900px) {
+                display:none;
+            };
+        }
+    }
+.home__list--wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transform: rotateX(-10deg) rotateY(20deg);
+    animation:fadeIn ease 12s;
+    @keyframes fadeIn{
+        0%{
+            opacity:0
+        }
+        100%{
+            opacity:1;
+        }
+    }
+    .home__link{
+        text-decoration:none;
+    }
+.home__list{
+    color:#FF4136;
+    font-size:60px;
+    @media screen and (max-width:700px){
+        font-size:30px;
+    };
+    position: relative;
+      color: transparent;
+    cursor: pointer;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top:49%;
+        left: -10%;
+        right: -10%;
+        height: 4px;
+        border-radius: 4px;
+        margin-top: -(4px / 2);
+        background: white;
+        transform: scale(0);
+        transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+        z-index: 1;
+      }
+      .home__span{
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        color: #9B2335;
+        top: 0;
+        height: 49%;
+        transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+        
+        span { display: block; }
+      }
+      .home__span + .home__span{
+        top: 49% - 0.1;
+        height: 100 - 49% + 0.1;
+        
+        span { transform: translateY(-49%); }
+      
+      }
+}
+
+.home__list:hover,
+ .home__list:active{
+    .home__span{color: #9B2335; transform: skewX(12deg) translateX(5px);};
+    .home__span + .home__span{
+        transform: skewX(12deg) translateX(-5px);
+    }
+    &::before { transform: scale(1); }
+}}

@@ -1,0 +1,249 @@
+//could have a scroll through menu
+@import './../../styles/_typography.scss' ;
+@import './../../styles/_mixins.scss';
+.about{
+    color:#FFAF4D;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-sizing:border-box;
+    background-image:url("../../assets/images/nasa-_SFJhRPzJHs-unsplash.jpg");
+    background-size: cover;
+    text-shadow: -1px 0 #355C7D, 0 1px #355C7D, 1px 0 #355C7D, 0 -1px #355C7D;
+    font-family:'Alegreya SC',serif;
+    width:100%;
+    box-sizing:border-box;
+    ul{
+        margin-block-start:0;
+        margin-block-end:0;
+        padding-inline-start:0;
+    }
+    .return__wrapper{
+        display:flex;
+        width:70%;
+        align-self:start;
+        padding-left:15px;
+        @include tablet{
+        width:95%;
+        }
+        justify-content:space-between;
+        padding-top:30px;
+        
+        //transform: rotateX(-10deg) rotateY(20deg);
+        .return__link{
+            text-decoration:none;
+        }
+        .nav{
+            display:flex;
+        }
+    .return__list{
+        color:#FF5733;
+        font-size:15px;
+        @include tablet{
+        font-size:30px;
+        }
+        position: relative;
+          color: transparent;
+          text-shadow: 4px 0 0 black, -2px 0 0 black, 0 4px 0 black, 0 -2px 0 black, 2px 2px black, -1px -1px 0 black, 2px -1px 0 black, -1px 2px 0 black;
+        cursor: pointer;
+        margin-right:5px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top:49%;
+            left: -10%;
+            right: -10%;
+            height: 4px;
+            border-radius: 4px;
+            margin-top: -(4px / 2);
+            background: white;
+            transform: scale(0);
+            transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+            z-index: 1;
+          }
+          .return__span{
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            color: #FF5733;
+            top: 0;
+            height: 49%;
+            text-shadow:none;
+            transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+            
+            span { display: block; }
+          }
+          .return__span + .return__span{
+            top: 49% - 0.1;
+            height: 100 - 49% + 0.1;
+            
+            span { transform: translateY(-49%); }
+          
+          }
+    }
+    
+    .return__list:hover,
+     .return__list:active{
+        .return__span{color: #FF5733; transform: skewX(12deg) translateX(5px);};
+        .return__span + .return__span{
+            transform: skewX(12deg) translateX(-5px);
+        }
+        &::before { transform: scale(1); }
+    }}
+    .about__heading{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius:30px;
+        border-bottom-left-radius:0px;
+        border-bottom-right-radius:0px;
+        width:70%;
+        @include desktop{
+            width:50%;
+        }
+       margin-top:20px;
+        .about__title{
+            color:#355C7D;
+            font-size:35px;
+            @include tablet{
+            font-size:50px;
+            }
+            margin:0;
+            text-shadow: -1px 0 #FFAF4D, 0 1px #FFAF4D, 1px 0 #FFAF4D, 0 -1px #FFAF4D;
+            font-family:"Racing Sans One", cursive;
+        }
+        .about__sub-title{
+            font-size:20px;
+            @include tablet{
+            font-size:35px;
+            }
+            color:#355C7D;
+            text-shadow: -1px 0 #FFAF4D, 0 1px #FFAF4D, 1px 0 #FFAF4D, 0 -1px #FFAF4D;
+        }
+    }
+    .about__description{ 
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius:30px;
+        border-top-left-radius:0px;
+        border-top-right-radius:0px;
+        width:95%;
+        @include desktop{
+       width:50%;
+        }
+        font-size:15px;
+        @include tablet{
+       font-size:20px;
+        }
+       text-align:center;
+    }
+    .about__layout{
+        display:flex;
+        width:100%;
+        flex-direction:column;
+        @include desktop{
+            flex-direction:row;
+        justify-content:space-around;
+        }
+        margin:0 20px;
+    .about__experience{
+        text-align:center;
+        font-size:30px;
+        color:#355C7D;
+        text-shadow: -1px 0 #FFAF4D, 0 1px #FFAF4D, 1px 0 #FFAF4D, 0 -1px #FFAF4D;
+        font-family:"Racing Sans One", cursive;
+        width:100%;
+    }
+    .about__experience--wrapper{
+        margin-top:20px;
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius:30px;
+        .experience__wrapper{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin:15px 0;
+            .experience__title{
+                margin:0;
+                margin-bottom:5px;
+                
+            }
+            .experience__sub-title{
+                margin:0;
+            }
+            .experience__list{
+                display:flex;
+                flex-direction:column;
+                list-style:none;
+                text-align:center;
+                padding:0;
+                .experience__item{
+                }
+            }
+
+        }
+    }
+        
+
+    
+    .about__education{
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius:30px;
+        margin-top:20px;
+       
+        .about__education--title{
+            font-size:30px;
+            margin-bottom:60px;
+            text-align:center;
+            color:#355C7D;
+            text-shadow: -1px 0 #FFAF4D, 0 1px #FFAF4D, 1px 0 #FFAF4D, 0 -1px #FFAF4D;
+            font-family:"Racing Sans One", cursive;
+
+        }
+        .about__education--wrapper{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        .education__title{
+            font-size:20px;
+            @include tablet{
+            font-size:23px;
+            }
+            margin:0;
+            text-align:center;
+            color:#FFAF4D;
+            text-shadow: -1px 0 #355C7D, 0 1px #355C7D, 1px 0 #355C7D, 0 -1px #355C7D;
+
+        }
+        .education__sub-title{
+            margin-bottom:60px;
+            font-size:17px;
+            @include tablet{
+            font-size:18px;
+            }
+        }
+    }
+
+    }
+}
+    .about__skills{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background-color:rgba(0, 0, 0, 0.8);
+        border-radius:32px;
+        
+        margin-top:15px;
+        .skills__title{
+            font-size:30px;
+            color:#355C7D;
+            text-shadow: -1px 0 #FFAF4D, 0 1px #FFAF4D, 1px 0 #FFAF4D, 0 -1px #FFAF4D;
+            font-family:"Racing Sans One", cursive;
+        }
+        .skills__sub-title{
+            padding:15px;
+            text-align:center;
+        }
+    }
+}

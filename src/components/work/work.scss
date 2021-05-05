@@ -1,0 +1,116 @@
+@import './../../styles/_typography.scss' ;
+@import './../../styles/_mixins.scss';
+/*.home__link{
+    text-decoration:none;
+    color:white;
+    .home__button{
+        font-family:"Racing Sans One",cursive;
+        font-size:30px;
+        margin-left:30px;
+    }
+}*/
+.work{
+    height:100%;
+    position:relative;
+    bottom:14px;
+    background-color:#0B0C10;
+    
+    
+.return__wrapper{
+    
+    display:flex;
+    width:90%;
+    justify-content:space-between;
+    padding-top:30px;
+    
+    //transform: rotateX(-10deg) rotateY(20deg);
+    .ul{
+        margin-block-start:0;
+        margin-block-end:0;
+        padding-inline-start:0;
+    }
+    .return__link{
+        text-decoration:none;
+    }
+    .nav{
+        display:flex;
+    }
+.return__list{
+    color:#66FCF1;;
+    font-size:20px;
+    @include tablet{
+    font-size:30px;
+    }
+    position: relative;
+      color: transparent;
+    cursor: pointer;
+    margin-right:5px;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top:49%;
+        left: -10%;
+        right: -10%;
+        height: 4px;
+        border-radius: 4px;
+        margin-top: -(4px / 2);
+        background: white;
+        transform: scale(0);
+        transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+        z-index: 1;
+      }
+      .return__span{
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        color: #66FCF1;
+        top: 0;
+        height: 49%;
+        transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+        
+        span { display: block; }
+      }
+      .return__span + .return__span{
+        top: 49% - 0.1;
+        height: 100 - 49% + 0.1;
+        
+        span { transform: translateY(-49%); }
+      
+      }
+}
+
+.return__list:hover,
+ .return__list:active{
+    .return__span{color: #66FCF1; transform: skewX(12deg) translateX(5px);};
+    .return__span + .return__span{
+        transform: skewX(12deg) translateX(-5px);
+    }
+    &::before { transform: scale(1); }
+}}
+.work__heading--hide{
+    display:none;
+}
+.work__heading--wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    //color:#66FCF1;
+    color:#ccdee2;
+    font-family:"Racing Sans One",cursive;
+    .work__heading{
+        margin-top:0;
+    }
+    .work__sub-heading{
+        padding-bottom:30px;
+        margin-bottom:20px;
+        padding-left:15px;
+        padding-right:15px;
+        text-align:center;
+
+    }
+}
+.iframe__wrapper{
+    height:100%;
+}
+}
