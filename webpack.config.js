@@ -17,6 +17,7 @@ module.exports = function(_env, argv) {
     entry: "./src/index.js",
    output: {
      path: path.resolve(__dirname, "dist"),
+     port:PORT,
       filename: "assets/js/[name].[contenthash:8].js",
       publicPath:"/"
     },
