@@ -22,7 +22,7 @@ module.exports = function(_env, argv) {
     },
     devServer:{
         contentBase:path.join(__dirname,'./dist/assets/'),
-        port:PORT
+        port:process.env.PORT
     },
     module: {
       rules: [
