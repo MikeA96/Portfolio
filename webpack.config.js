@@ -10,6 +10,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = function(_env, argv) {
   const isProduction = argv.mode === "production";
   const isDevelopment = !isProduction;
+  const PORT= process.env.PORT|| '8080'
 
   return {
     devtool: isDevelopment && "cheap-module-source-map",
@@ -20,7 +21,8 @@ module.exports = function(_env, argv) {
       publicPath:"/"
     },
     devServer:{
-        contentBase:path.join(__dirname,'./dist/assets/')
+        contentBase:path.join(__dirname,'./dist/assets/'),
+        port:PORT
     },
     module: {
       rules: [
