@@ -24,8 +24,7 @@ module.exports = function(_env, argv) {
         contentBase:path.join(__dirname,'./dist/assets/'),
         hot:true,
         host,
-        port:PORT,
-        publicPath:'/'
+        port:PORT
     },
     module: {
       rules: [
