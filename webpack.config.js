@@ -22,7 +22,6 @@ module.exports = function(_env, argv) {
     },
     devServer:{
         contentBase:path.join(__dirname,'./dist/assets/'),
-        hot:true,
         host,
         port:PORT
     },
