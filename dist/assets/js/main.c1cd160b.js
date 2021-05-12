@@ -1,1 +1,0 @@
-(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[179],{352:(e,r,o)=>{"use strict";var t=o(135),i=o.n(t);o(294);o(935).render(i()("h3",{},void 0,"React App"),document.getElementById("root")),"serviceWorker"in navigator&&window.addEventListener("load",(function(){navigator.serviceWorker.register("/service-worker.js")}))}},0,[[352,666,905,532,805,183,578]]]);
