@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start:dev": "webpack serve --mode development",
-    "start": "node server.js",
-    "heroku-postbuild": "npm run build"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -89,5 +88,8 @@
     "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^6.1.0",
     "worker-loader": "^3.0.8"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.1.2"
   }
 }
