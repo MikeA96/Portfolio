@@ -114,7 +114,7 @@ module.exports = function(_env, argv) {
     optimization: {
       minimize: isProduction,
       minimizer: [
-        new TerserWebpackPlugin({
+      /*  new TerserWebpackPlugin({
           terserOptions: {
             compress: {
               comparisons: false
@@ -128,7 +128,7 @@ module.exports = function(_env, argv) {
             },
             warnings: false
           }
-        }),
+        }),*/
         new OptimizeCssAssetsPlugin()
       ],
       splitChunks: {
