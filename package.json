@@ -7,7 +7,6 @@
     "build": "webpack --mode production",
     "start:dev": "webpack serve --mode development",
     "start": "node server.js",
-    "heroku-prebuild": "npm i",
     "heroku-postbuild": "npm run build"
   },
   "author": "",
