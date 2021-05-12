@@ -13,8 +13,8 @@ class Home extends Component{
             <h1 className="home__header">MICHAEL ALLAN</h1>
             </div>
             <div className="home__lightning--wrapper">
-            <iframe src="src/assets/images/giphy.gif" width="480" height="480" frameBorder="0" className="home__lightning" scrolling="no"  ></iframe>
-            <iframe src="src/assets/images/giphy.gif" width="480" height="480" frameBorder="0" className="home__lightning" scrolling="no" ></iframe>
+            <iframe src="giphy.gif" width="480" height="480" frameBorder="0" className="home__lightning" scrolling="no"  ></iframe>
+            <iframe src="giphy.gif" width="480" height="480" frameBorder="0" className="home__lightning" scrolling="no" ></iframe>
             </div>
             <ul className="home__list--wrapper">
                 <Link to='/about' className="home__link">

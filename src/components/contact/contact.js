@@ -71,13 +71,13 @@ class Contact extends Component{
              </div>
              </ul>
                 <div className={this.state.linkedIn} onClick={this.handleLinkedIn}>
-                    <img src="src/assets/images/LinkedIn-Logos/LI-Logo.png" className="linkedIn" />
+                    <img src="LI-Logo.png" className="linkedIn" />
                 </div>
                 <div className={this.state.gmail} onClick={this.handleGmail}>
-                    <img src="src/assets/images/iconfinder_gmail_1220367.png" className="gmail"/>
+                    <img src="iconfinder_gmail_1220367.png" className="gmail"/>
                 </div>
                 <div className={this.state.gitHub} onClick={this.handleGitHub}>
-                <img src="src/assets/images/GitHub-Logos/GitHub_Logo_White.png" className="gitHub"/> 
+                <img src="GitHub_Logo_White.png" className="gitHub"/> 
                 </div>
              <div className="linkedIn__title--wrapper">
                 <a className="contact_title" href="https://www.linkedin.com/in/michael-allan-480a961a1">https://www.linkedin.com/in/michael-allan-480a961a1</a>
